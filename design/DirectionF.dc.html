@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap">
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Work Sans', Arial, sans-serif; }
+    a { color: #2645F5; } a:hover { color: #1730B0; }
+  </style>
+</helmet>
+
+<div style="width:390px; height:844px; background:#FFFDF7; position:relative; overflow:hidden; display:flex; flex-direction:column; padding:26px 22px; color:#14141A;">
+
+  <svg width="46" height="46" viewBox="0 0 46 46" style="position:absolute; top:18px; right:120px;"><path d="M23 2 L44 40 L2 40 Z" fill="#FFD400" stroke="#14141A" stroke-width="2"/></svg>
+  <svg width="30" height="30" viewBox="0 0 30 30" style="position:absolute; top:210px; left:14px;"><rect x="2" y="2" width="26" height="26" fill="none" stroke="#2645F5" stroke-width="2.5" transform="rotate(18 15 15)"/></svg>
+  <svg width="60" height="18" viewBox="0 0 60 18" style="position:absolute; bottom:190px; right:20px;"><path d="M1 9 Q9 1, 17 9 T33 9 T49 9" stroke="#FF3E8E" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+
+  <div style="display:flex; justify-content:space-between; align-items:center; z-index:1;">
+    <div style="font-family:'Unbounded', sans-serif; font-weight:800; font-size:20px; color:#14141A; transform:rotate(-2deg);">Both/And</div>
+    <div style="font-family:'Unbounded', sans-serif; font-weight:700; font-size:10px; padding:6px 11px; background:#FFD400; border:2px solid #14141A; color:#14141A;">5-DAY STREAK</div>
+  </div>
+
+  <div style="font-size:11px; color:#6b6b74; margin-top:16px; z-index:1;">THU, MARCH 12</div>
+
+  <div style="display:flex; gap:6px; margin-top:20px; z-index:1;">
+    <div style="flex:1; text-align:center; padding:10px 0; background:#2645F5; color:#fff; border:2.5px solid #14141A; font-family:'Unbounded'; font-weight:700; font-size:11px; transform:skewX(-6deg);">NOVICE</div>
+    <div style="flex:1; text-align:center; padding:10px 0; color:#6b6b74; border:2.5px solid #d8d8d0; font-family:'Unbounded'; font-weight:700; font-size:11px; transform:skewX(-6deg);">EXPERT</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; z-index:1;">
+    <svg width="280" height="212" viewBox="0 0 360 280" style="transform:rotate(-3deg);">
+      <circle cx="140" cy="150" r="100" fill="#2645F5" stroke="#14141A" stroke-width="3.5"/>
+      <circle cx="240" cy="150" r="100" fill="#FF3E8E" stroke="#14141A" stroke-width="3.5" style="mix-blend-mode:multiply"/>
+      <text x="55" y="86" font-size="16" fill="#fff" font-weight="700" font-family="Unbounded">CATS</text>
+      <text x="250" y="86" font-size="13" fill="#fff" font-weight="700" font-family="Unbounded">HEROES</text>
+    </svg>
+    <div style="background:#FFD400; border:2.5px solid #14141A; padding:8px 16px; transform:rotate(2deg); box-shadow:3px 3px 0 #14141A;">
+      <div style="font-family:'Unbounded'; font-weight:700; font-size:11px; color:#14141A;">TAP TO ANSWER</div>
+    </div>
+  </div>
+
+  <div style="width:100%; padding:16px; background:#14141A; color:#FFFDF7; border:2.5px solid #14141A; font-family:'Unbounded'; font-weight:700; font-size:13px; text-align:center; z-index:1; box-shadow:5px 5px 0 #FF3E8E;">FILL IN YOUR ANSWER</div>
+
+  <div style="display:flex; justify-content:space-around; align-items:center; margin-top:22px; padding-top:16px; border-top:2.5px solid #14141A; z-index:1;">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="7" stroke="#14141A" stroke-width="2"/><circle cx="15" cy="12" r="7" stroke="#14141A" stroke-width="2"/></svg>
+      <div style="font-family:'Unbounded'; font-size:8px; color:#14141A;">TODAY</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.4-9.3-8.8C1 8 2.4 4.8 5.6 4.1c2-.4 3.8.6 4.9 2.2 1.1-1.6 2.9-2.6 4.9-2.2 3.2.7 4.6 3.9 2.9 7.1C19 15.6 12 20 12 20z" stroke="#a8a8a0" stroke-width="2" stroke-linejoin="round"/></svg>
+      <div style="font-family:'Unbounded'; font-size:8px; color:#a8a8a0;">VOTE</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#a8a8a0" stroke-width="2"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#a8a8a0" stroke-width="2" stroke-linecap="round"/></svg>
+      <div style="font-family:'Unbounded'; font-size:8px; color:#a8a8a0;">PROFILE</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="1.5" stroke="#a8a8a0" stroke-width="2"/><path d="M3 7l2-3h14l2 3" stroke="#a8a8a0" stroke-width="2" stroke-linejoin="round"/></svg>
+      <div style="font-family:'Unbounded'; font-size:8px; color:#a8a8a0;">ARCHIVE</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

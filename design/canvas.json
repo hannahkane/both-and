@@ -1,0 +1,50 @@
+{
+  "artboards": [
+    { "file": "SignIn.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "Main.dc.html", "x": 490, "y": 0, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "FillIn.dc.html", "x": 980, "y": 0, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "Submitted.dc.html", "x": 1470, "y": 0, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "Vote.dc.html", "x": 0, "y": 964, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "Results.dc.html", "x": 490, "y": 964, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "Profile.dc.html", "x": 980, "y": 964, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "ArchiveBrowse.dc.html", "x": 1470, "y": 964, "w": 390, "h": 844, "page": "page-1" },
+
+    { "file": "TodayExpert.dc.html", "x": 0, "y": 1928, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "FillInExpert.dc.html", "x": 490, "y": 1928, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "VoteExpert.dc.html", "x": 980, "y": 1928, "w": 390, "h": 844, "page": "page-1" },
+    { "file": "ResultsExpert.dc.html", "x": 1470, "y": 1928, "w": 390, "h": 844, "page": "page-1" },
+
+    { "file": "FlowMap.dc.html", "x": 0, "y": 0, "w": 1950, "h": 1120, "page": "page-2" },
+    { "file": "DirectionA.dc.html", "x": 0, "y": 1220, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "DirectionB.dc.html", "x": 490, "y": 1220, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "DirectionC.dc.html", "x": 980, "y": 1220, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "DirectionD.dc.html", "x": 0, "y": 2320, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "DirectionE.dc.html", "x": 490, "y": 2320, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "DirectionF.dc.html", "x": 980, "y": 2320, "w": 390, "h": 844, "page": "page-2" },
+
+    { "file": "VoteExpertA.dc.html", "x": 0, "y": 3420, "w": 390, "h": 844, "page": "page-2" },
+    { "file": "VoteExpertB.dc.html", "x": 490, "y": 3420, "w": 390, "h": 844, "page": "page-2" }
+  ],
+  "annotations": [
+    { "id": "screens-heading", "x": 0, "y": -80, "w": 900, "text": "Both/And — Memphis Geometric Pop, full screen set (row 1: daily loop, row 2: nav-accessible)", "page": "page-1" },
+    { "id": "expert-row-heading", "x": 0, "y": 1868, "w": 900, "text": "Expert (3-circle) variants — players fill all 4 overlap regions (3 pairwise + center)", "page": "page-1" },
+
+    { "id": "directions-heading", "x": 0, "y": 1160, "w": 700, "text": "Visual style directions — all showing the Today's Puzzle screen", "page": "page-2" },
+    { "id": "note-a", "x": 0, "y": 2084, "w": 390, "text": "A — Editorial Minimal: NYT Games-style restraint. Reads as a ‘smart puzzle,’ calm and confident.\n\nTradeoff: lower visual energy — could feel dry to more casual players.", "page": "page-2" },
+    { "id": "note-b", "x": 490, "y": 2084, "w": 390, "text": "B — Bold Pop Playful: high-energy, broad mobile-game appeal, very shareable.\n\nTradeoff: leans more mass-casual than ‘clever wordplay niche.’", "page": "page-2" },
+    { "id": "note-c", "x": 980, "y": 2084, "w": 390, "text": "C — Retro Paper/Handcrafted: cute and crafted — matches ‘Both/And’ as a clever, personal name.\n\nTradeoff: hand-drawn wobble effects add a bit more visual complexity to keep consistent across every screen.", "page": "page-2" },
+    { "id": "more-directions-heading", "x": 0, "y": 2260, "w": 700, "text": "Three more directions", "page": "page-2" },
+    { "id": "note-d", "x": 0, "y": 3184, "w": 390, "text": "D — Dark Neon Arcade: tech/night-owl energy, glowing circles, terminal-style prompts.\n\nTradeoff: dark UI needs careful contrast tuning for long reading sessions, and the pixel font is only legible at small doses.", "page": "page-2" },
+    { "id": "note-e", "x": 490, "y": 3184, "w": 390, "text": "E — Soft Pastel Zen: calm, breathable, wellness-app energy — wordplay as a gentle daily ritual.\n\nTradeoff: lower contrast and softness could read as less ‘game-like’ or make the CTA less obvious at a glance.", "page": "page-2" },
+    { "id": "note-f", "x": 980, "y": 3184, "w": 390, "text": "F — Memphis Geometric Pop: loud, graphic, 90s-postmodern — confetti shapes, tilted layout, poster energy. CHOSEN — built out into the full screen set on the Screens page.\n\nTradeoff: busiest of all six directions; the decorative shapes need care so they never crowd real content or hurt legibility.", "page": "page-2" },
+
+    { "id": "expert-vote-decision-heading", "x": 0, "y": 3360, "w": 900, "text": "Earlier fork: how should Expert voting work? Decision: players fill all 4 regions (option B) — built out as TodayExpert / FillInExpert / VoteExpert / ResultsExpert on the Screens page.", "page": "page-2" },
+    { "id": "note-vote-expert-a", "x": 0, "y": 4284, "w": 390, "text": "A (not chosen) — users only fill the center blank; the 3 pairwise overlaps come pre-filled by the app. Kept the Vote screen unchanged from Novice, but required a much heavier content pipeline (6 pre-filled items/day instead of 3).", "page": "page-2" },
+    { "id": "note-vote-expert-b", "x": 490, "y": 4284, "w": 390, "text": "B (chosen) — users fill all 4 overlap regions; each submission is the full solved diagram. Voting became one-submission-at-a-time instead of a scrollable list.", "page": "page-2" }
+  ],
+  "pages": [
+    { "id": "page-1", "name": "Screens" },
+    { "id": "page-2", "name": "Explorations" }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

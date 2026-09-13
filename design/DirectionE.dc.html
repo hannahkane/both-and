@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Karla:wght@400;500;600&display=swap">
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Karla', Arial, sans-serif; }
+    a { color: #B98A9A; } a:hover { color: #9C6E7E; }
+  </style>
+</helmet>
+
+<div style="width:390px; height:844px; background:#F6F3F8; display:flex; flex-direction:column; padding:30px 26px; color:#4A4750;">
+
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-family:'Quicksand', sans-serif; font-weight:700; font-size:23px; color:#4A4750;">Both/And</div>
+    <div style="font-size:11px; padding:6px 13px; border-radius:20px; background:#EFE1E7; color:#9C6E7E;">5-day streak</div>
+  </div>
+
+  <div style="font-size:12px; color:#A79FAE; margin-top:16px;">Thursday, March 12</div>
+
+  <div style="display:flex; gap:8px; margin-top:22px;">
+    <div style="flex:1; text-align:center; padding:10px 0; border-radius:16px; background:#fff; color:#4A4750; font-family:'Quicksand'; font-weight:600; font-size:13px; box-shadow:0 3px 10px rgba(74,71,80,0.06);">Novice</div>
+    <div style="flex:1; text-align:center; padding:10px 0; border-radius:16px; color:#B7AFC0; font-family:'Quicksand'; font-weight:600; font-size:13px;">Expert</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px;">
+    <div style="background:#fff; border-radius:28px; padding:22px 10px; box-shadow:0 8px 24px rgba(74,71,80,0.08);">
+      <svg width="270" height="205" viewBox="0 0 360 280">
+        <circle cx="140" cy="150" r="100" fill="#F0C9CB" fill-opacity="0.85"/>
+        <circle cx="240" cy="150" r="100" fill="#C9DFC7" fill-opacity="0.85" style="mix-blend-mode:multiply"/>
+        <text x="66" y="88" font-size="14" fill="#8A6A72" font-family="Quicksand" font-weight="600">cats</text>
+        <text x="258" y="88" font-size="12" fill="#5C8058" font-family="Quicksand" font-weight="600">heroes</text>
+      </svg>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <div style="font-family:'Quicksand'; font-weight:600; font-size:14px; color:#4A4750;">what belongs to both?</div>
+      <div style="font-size:12px; color:#B98A9A;">tap gently to answer</div>
+    </div>
+  </div>
+
+  <div style="width:100%; padding:16px; border-radius:24px; background:#E4D3DA; color:#5A4750; font-family:'Quicksand'; font-weight:600; font-size:14px; text-align:center;">Fill in your answer</div>
+
+  <div style="display:flex; justify-content:space-around; align-items:center; margin-top:22px; padding-top:16px;">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="7" stroke="#4A4750" stroke-width="1.5"/><circle cx="15" cy="12" r="7" stroke="#4A4750" stroke-width="1.5"/></svg>
+      <div style="font-size:9px; color:#4A4750;">Today</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.4-9.3-8.8C1 8 2.4 4.8 5.6 4.1c2-.4 3.8.6 4.9 2.2 1.1-1.6 2.9-2.6 4.9-2.2 3.2.7 4.6 3.9 2.9 7.1C19 15.6 12 20 12 20z" stroke="#C6BFCE" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <div style="font-size:9px; color:#C6BFCE;">Vote</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#C6BFCE" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#C6BFCE" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div style="font-size:9px; color:#C6BFCE;">Profile</div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="1.5" stroke="#C6BFCE" stroke-width="1.5"/><path d="M3 7l2-3h14l2 3" stroke="#C6BFCE" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <div style="font-size:9px; color:#C6BFCE;">Archive</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

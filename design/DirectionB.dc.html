@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Figtree', Arial, sans-serif; }
+    a { color: #16163A; } a:hover { color: #000; }
+  </style>
+</helmet>
+
+<div style="width:390px; height:844px; background:#4C5FE0; display:flex; flex-direction:column; padding:18px;">
+
+  <div style="flex:1; display:flex; flex-direction:column; background:#fff; border-radius:26px; padding:20px; box-shadow:0 10px 0 rgba(22,22,58,0.15);">
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div style="font-family:'Fredoka', sans-serif; font-weight:700; font-size:26px; color:#16163A;">Both/And</div>
+      <div style="font-family:'Fredoka', sans-serif; font-weight:600; font-size:12px; padding:6px 12px; border-radius:20px; background:#FFD166; color:#16163A;">5-day streak</div>
+    </div>
+
+    <div style="display:flex; gap:0; margin-top:18px; border:2.5px solid #16163A; border-radius:24px; padding:4px; background:#f3f3fb;">
+      <div style="flex:1; text-align:center; padding:9px 0; border-radius:20px; background:#FF6B6B; color:#fff; font-family:'Fredoka'; font-weight:600; font-size:14px; box-shadow:0 2px 0 rgba(22,22,58,0.25);">Novice</div>
+      <div style="flex:1; text-align:center; padding:9px 0; color:#8a8aa8; font-family:'Fredoka'; font-weight:600; font-size:14px;">Expert</div>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; position:relative;">
+      <svg width="290" height="220" viewBox="0 0 360 280">
+        <circle cx="140" cy="150" r="100" fill="#FF6B6B" fill-opacity="0.88" stroke="#16163A" stroke-width="4"/>
+        <circle cx="240" cy="150" r="100" fill="#2FC1B8" fill-opacity="0.88" stroke="#16163A" stroke-width="4" style="mix-blend-mode:multiply"/>
+        <text x="58" y="90" font-size="17" fill="#fff" font-weight="700" font-family="Fredoka">CATS</text>
+        <text x="252" y="90" font-size="14" fill="#fff" font-weight="700" font-family="Fredoka">HEROES</text>
+      </svg>
+      <div style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%) rotate(-4deg); background:#fff; border:2.5px solid #16163A; border-radius:14px; padding:8px 14px; box-shadow:3px 3px 0 rgba(22,22,58,0.3);">
+        <div style="font-family:'Fredoka'; font-weight:600; font-size:13px; color:#FF6B6B;">tap to answer!</div>
+      </div>
+    </div>
+
+    <div style="width:100%; padding:16px; border-radius:50px; background:#FFD166; border:3px solid #16163A; box-shadow:4px 4px 0 #16163A; font-family:'Fredoka'; font-weight:700; font-size:15px; color:#16163A; text-align:center;">Fill In Your Answer</div>
+
+    <div style="display:flex; justify-content:space-around; align-items:center; margin-top:18px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px; padding:6px 12px; border-radius:14px; background:#f3f3fb;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="7" stroke="#16163A" stroke-width="2"/><circle cx="15" cy="12" r="7" stroke="#16163A" stroke-width="2"/></svg>
+        <div style="font-family:'Fredoka'; font-weight:600; font-size:9px; color:#16163A;">Today</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.4-9.3-8.8C1 8 2.4 4.8 5.6 4.1c2-.4 3.8.6 4.9 2.2 1.1-1.6 2.9-2.6 4.9-2.2 3.2.7 4.6 3.9 2.9 7.1C19 15.6 12 20 12 20z" stroke="#a3a3c2" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div style="font-family:'Fredoka'; font-weight:600; font-size:9px; color:#a3a3c2;">Vote</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#a3a3c2" stroke-width="2"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#a3a3c2" stroke-width="2" stroke-linecap="round"/></svg>
+        <div style="font-family:'Fredoka'; font-weight:600; font-size:9px; color:#a3a3c2;">Profile</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#a3a3c2" stroke-width="2"/><path d="M3 7l2-3h14l2 3" stroke="#a3a3c2" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div style="font-family:'Fredoka'; font-weight:600; font-size:9px; color:#a3a3c2;">Archive</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
