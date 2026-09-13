@@ -40,6 +40,8 @@ Core solving, social/voting, retention, and safety stories were drafted during t
 ## Open / next steps
 
 - Engineering build plan: platform/tech stack, backend architecture for daily puzzle publishing + submissions + voting + moderation queue, security/privacy review.
-- Apple Developer Program + Google Play Console enrollment (user action, has lead time).
-- Support email + privacy policy URL (required for both app stores; matters more here given accounts + UGC).
+- Apple Developer Program — ✅ already enrolled.
+- Google Play Console enrollment — pending (user action).
+- Support email — pending (user action).
+- Privacy policy URL — pending; will be hosted on GitHub Pages.
 - Formalize user stories into a tracked backlog.
