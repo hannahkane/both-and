@@ -26,9 +26,39 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 - **Content pipeline**: AI-assisted generation of daily puzzles, with human (owner) approval before publish.
 - **Moderation**: automated profanity/toxicity filter blocks obvious bad content pre-publish; user reports route to a manual review queue.
 
-## User stories (draft — see conversation history for full list)
+## User stories
 
-Core solving, social/voting, retention, and safety stories were drafted during the PM phase covering: seeing today's diagram, filling and submitting an answer once per day, browsing and voting on others' answers, seeing daily results and streaks, and reporting/moderating abusive content. (To be formalized into a tracked backlog during the engineering phase.)
+**Core solving**
+- As a player, I want to see today's Novice (2-circle) and Expert (3-circle) puzzles, so I can choose which to play.
+- As a player, I want to see the fixed, pre-filled exclusive-category words for today's puzzle, so I understand the categories I'm working within.
+- As a Novice player, I want to fill in the single overlap segment, so I can submit my answer.
+- As an Expert player, I want to fill in all 4 overlap regions (3 pairwise + the center) one at a time, with a clear indicator of which region I'm currently on, so the harder puzzle stays manageable.
+- As a player, I want to submit only once per puzzle per tier, so the game has a fair, Wordle-like daily cadence.
+- As a player, I want confirmation that my submission is locked in, so I know I won't be accused of copying others after seeing theirs.
+
+**Social / voting**
+- As a player, I want submitting my own answer to unlock the ability to see and vote on others' submissions, so no one can copy another player's answer before submitting their own.
+- As a Novice player, I want to browse other players' submissions in a scrollable feed, so I can enjoy their wordplay.
+- As an Expert player, I want to page through other players' full solved diagrams one at a time, so I can read all 4 of their answers without a cramped thumbnail view.
+- As a player, I want a budget of 3 votes per day I can spend across different submissions, so I'm not forced to lock in a single "best so far" pick early and miss voting for something better later in the day.
+- As a player, I want the voting feed shown in shuffled (non-chronological) order, so early submissions don't get an unfair advantage just from being visible longer.
+- As a player, I want submissions ranked by a rate (votes ÷ views) rather than raw vote count, so a great late-posted answer isn't buried under an earlier one that simply got more total exposure.
+- As a player, I want to see the day's "Funniest" result and how my submission ranked, so there's a payoff to the ritual.
+
+**Retention / identity**
+- As a player, I want to sign in with Apple or Google, so my streak, history, and votes are tied to a real, portable identity.
+- As a returning player, I want to see my streak and history, so I have a reason to come back daily.
+- As a player, I want to keep my streak even if my submission gets few or no votes (e.g. a last-minute submission), so streak reflects participation, not popularity.
+- As a player, I want to browse (but not play) past days' puzzles, so I can revisit good answers without diluting the "you had to be there" shared-ritual feeling.
+
+**Safety / moderation**
+- As a player, I want obviously abusive or profane submissions automatically blocked before they're ever visible to others, so the game stays usable without relying only on reports.
+- As a player, I want to report a submission that slips through the filter, so it can be reviewed and removed.
+- As the app owner, I want reported submissions to land in a review queue I check personally, so I keep tight control over content given the game's small scale.
+
+**Content pipeline**
+- As the app owner, I want an AI-assisted tool to propose each day's puzzle categories and pre-filled words, so I don't have to hand-author everything from scratch.
+- As the app owner, I want to review and approve/edit each day's AI-generated puzzle before it goes live, so nothing nonsensical or low-quality gets published under my name.
 
 ## Design
 
@@ -37,11 +67,18 @@ Core solving, social/voting, retention, and safety stories were drafted during t
 - **Screens built** (`design/*.dc.html`, a multi-artboard design canvas): Sign In, Today's Puzzle, Fill In, Submitted, Vote, Results, Profile, Archive (Novice/shared), plus Today, Fill In, Vote, and Results variants for the Expert (3-circle, 4-blank) tier.
 - Design canvas source lives in `design/` (`.dc.html` files are Design Components — plain HTML/CSS/inline-SVG artboards, no build step). `canvas.json` defines the layout across two pages: "Screens" (finished set) and "Explorations" (style-direction sketches and rejected mechanic sketches, kept for reference).
 
-## Open / next steps
+## Next steps (pick up here next session)
 
-- Engineering build plan: platform/tech stack, backend architecture for daily puzzle publishing + submissions + voting + moderation queue, security/privacy review.
-- Apple Developer Program — ✅ already enrolled.
-- Google Play Console enrollment — pending (user action).
-- Support email — pending (user action).
-- Privacy policy URL — pending; will be hosted on GitHub Pages.
-- Formalize user stories into a tracked backlog.
+1. **Set up the GitHub remote** — create the repo, push this history, and set up GitHub Pages (this is also where the privacy policy page will live).
+2. **Engineering build plan** — platform/tech stack decision (native vs. cross-platform), backend architecture for daily puzzle publishing + submissions + voting/scoring + the moderation review queue + Sign in with Apple/Google, and a security/privacy review.
+3. **Formalize the user stories above into a tracked backlog** (e.g. GitHub Issues, once the repo exists).
+
+**Pending on Hannah, in parallel (not blocking engineering start):**
+- Google Play Console enrollment (~$25 one-time).
+- A support email address.
+- Privacy policy page content (target: GitHub Pages).
+
+**Already done:**
+- ✅ Project repo + git initialized locally.
+- ✅ Apple Developer Program enrollment.
+- ✅ Product decisions (mechanics, tiers, voting, moderation) and design canvas (Memphis Geometric Pop, all core + Expert screens) — see above and `design/`.
