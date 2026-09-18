@@ -67,10 +67,26 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 - **Screens built** (`design/*.dc.html`, a multi-artboard design canvas): Sign In, Today's Puzzle, Fill In, Submitted, Vote, Results, Profile, Archive (Novice/shared), plus Today, Fill In, Vote, and Results variants for the Expert (3-circle, 4-blank) tier.
 - Design canvas source lives in `design/` (`.dc.html` files are Design Components — plain HTML/CSS/inline-SVG artboards, no build step). `canvas.json` defines the layout across two pages: "Screens" (finished set) and "Explorations" (style-direction sketches and rejected mechanic sketches, kept for reference).
 
+## Engineering (decided)
+
+- **Frontend**: **React Native + Expo** (managed workflow). Single codebase for iOS + Android; chosen over native-per-platform or Flutter because it has the largest ecosystem/AI-training-data of any cross-platform option (relevant since this is being built with little/no prior coding background, leaning on AI assistance) and Expo's EAS Build/Submit handles App Store/Play Store packaging and code signing without needing Xcode/Android Studio expertise.
+- **Backend**: **Supabase**, chosen over Firebase. Postgres (relational) fits this game's data shape — puzzles → submissions → votes → rankings — better than Firebase's NoSQL model, especially for the votes÷views rate calculation (a SQL view). Two things matter most for a solo, low-code-experience build:
+  - **Row Level Security (RLS)**: game rules like the submit-to-view gate and the 3-votes/day budget are enforced as declarative database policies instead of custom backend code to write and debug.
+  - **Built-in Auth**: Sign in with Apple and Google supported out of the box.
+  - Generous free tier, appropriate for this app's niche/small scale.
+- **Data model (sketch)**: `users`, `puzzles` (date, tier, categories, exclusive words, status: draft/approved/published), `submissions`, `votes`, `reports`. Rate-ranking is a SQL view over `votes` and impression counts.
+- **View tracking** (for the votes÷views rate): a lightweight impression count, logged each time a submission is served in someone's feed.
+- **Scheduling**: a Supabase scheduled Edge Function flips puzzle status and handles the daily publish/reset at the fixed global reset time.
+- **Moderation**: submissions are checked against the **Google Perspective API** via an Edge Function before being stored; content that scores above threshold is rejected pre-publish instead of just flagged after the fact.
+- **Content pipeline / AI puzzle generation**: **Claude** drafts each day's puzzle (categories + exclusive words) into the `puzzles` table as a `draft` row.
+- **Admin tooling**: no separate admin app. Puzzle review/approval and the report queue are handled directly in **Supabase Studio** (its Table Editor, including a structured JSON editor for the categories/words columns, and SQL editor) — the right amount of tooling for a one-person, one-puzzle-a-day workload. Trade-off: no guardrails against typos and no one-click "hide + notify" actions, accepted in exchange for zero extra project to build or deploy.
+- **Security/privacy notes**: no password handling (OAuth only via Apple/Google through Supabase Auth); RLS default-deny on all tables; moderation/LLM API keys kept server-side in Edge Function secrets, never exposed to the client; minimal PII collected (auth provider ID + display name only).
+
 ## Next steps (pick up here next session)
 
 1. **Enable GitHub Pages** once privacy policy content exists (repo is public, so free-tier Pages works — just needs a source, e.g. a `docs/` folder).
-2. **Engineering build plan** — platform/tech stack decision (native vs. cross-platform), backend architecture for daily puzzle publishing + submissions + voting/scoring + the moderation review queue + Sign in with Apple/Google, and a security/privacy review.
+2. **Scaffold the project**: initialize the Expo (React Native) app and the Supabase project (tables, RLS policies, Auth providers for Apple/Google, scheduled Edge Function for daily publish).
+3. **Security/privacy review** of the engineering plan above before real user data flows through it (RLS policy correctness, moderation coverage, key handling).
 
 **Pending on Hannah, in parallel (not blocking engineering start):**
 - Google Play Console enrollment (~$25 one-time).
@@ -82,3 +98,4 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 - ✅ Apple Developer Program enrollment.
 - ✅ Product decisions (mechanics, tiers, voting, moderation) and design canvas (Memphis Geometric Pop, all core + Expert screens) — see above and `design/`.
 - ✅ User stories formalized as tracked [GitHub Issues](https://github.com/hannahkane/both-and/issues) (22 issues, labeled `core-solving`, `social-voting`, `retention-identity`, `safety-moderation`, `content-pipeline`).
+- ✅ Engineering build plan (stack, data model, moderation, content pipeline, admin tooling) — see "Engineering" above.
