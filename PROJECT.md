@@ -71,7 +71,6 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 
 1. **Enable GitHub Pages** once privacy policy content exists (repo is public, so free-tier Pages works — just needs a source, e.g. a `docs/` folder).
 2. **Engineering build plan** — platform/tech stack decision (native vs. cross-platform), backend architecture for daily puzzle publishing + submissions + voting/scoring + the moderation review queue + Sign in with Apple/Google, and a security/privacy review.
-3. **Formalize the user stories above into a tracked backlog** (e.g. GitHub Issues — repo now exists).
 
 **Pending on Hannah, in parallel (not blocking engineering start):**
 - Google Play Console enrollment (~$25 one-time).
@@ -82,3 +81,4 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 - ✅ Project repo + git initialized locally, pushed to GitHub: [hannahkane/both-and](https://github.com/hannahkane/both-and) (public).
 - ✅ Apple Developer Program enrollment.
 - ✅ Product decisions (mechanics, tiers, voting, moderation) and design canvas (Memphis Geometric Pop, all core + Expert screens) — see above and `design/`.
+- ✅ User stories formalized as tracked [GitHub Issues](https://github.com/hannahkane/both-and/issues) (22 issues, labeled `core-solving`, `social-voting`, `retention-identity`, `safety-moderation`, `content-pipeline`).
