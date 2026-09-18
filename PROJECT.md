@@ -85,8 +85,9 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 ## Next steps (pick up here next session)
 
 1. **Enable GitHub Pages** once privacy policy content exists (repo is public, so free-tier Pages works — just needs a source, e.g. a `docs/` folder).
-2. **Scaffold the project**: initialize the Expo (React Native) app and the Supabase project (tables, RLS policies, Auth providers for Apple/Google, scheduled Edge Function for daily publish).
-3. **Security/privacy review** of the engineering plan above before real user data flows through it (RLS policy correctness, moderation coverage, key handling).
+2. **Create the live Supabase project** (needs Hannah's Supabase account — Claude can't create third-party accounts): then run `supabase link` + `supabase db push` to apply the migration, set the `PERSPECTIVE_API_KEY`/`ANTHROPIC_API_KEY` function secrets, configure Apple/Google Auth providers, and schedule `daily-publish` as a Dashboard cron job at the fixed reset time.
+3. **Build the app screens** against the design canvas (`design/`), wired to the scaffolded Supabase client (`app/src/lib/supabase.ts`).
+4. **Security/privacy review** of the engineering plan above before real user data flows through it (RLS policy correctness — untested against a live/local Postgres so far since Docker isn't running locally, moderation coverage, key handling).
 
 **Pending on Hannah, in parallel (not blocking engineering start):**
 - Google Play Console enrollment (~$25 one-time).
@@ -99,3 +100,4 @@ Scope: a polished portfolio piece — real and functional, not a revenue play. i
 - ✅ Product decisions (mechanics, tiers, voting, moderation) and design canvas (Memphis Geometric Pop, all core + Expert screens) — see above and `design/`.
 - ✅ User stories formalized as tracked [GitHub Issues](https://github.com/hannahkane/both-and/issues) (22 issues, labeled `core-solving`, `social-voting`, `retention-identity`, `safety-moderation`, `content-pipeline`).
 - ✅ Engineering build plan (stack, data model, moderation, content pipeline, admin tooling) — see "Engineering" above.
+- ✅ Project scaffolded: Expo (React Native) app at `app/`, Supabase project at `supabase/` (initial migration with schema + RLS policies, `moderate-submission` and `daily-publish` Edge Functions) — not yet linked to a live Supabase project.
